@@ -1,0 +1,17 @@
+
+カテゴリーID6を10個表示
+ループ前に記載
+<?php query_posts('cat=6&posts_per_page=10'); ?>
+
+ワードプレスループ関数
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php endwhile; endif; ?>
+
+投稿者名表示
+<?php the_author(); ?>
+
+カテゴリー名表示
+<?php the_category(); ?>
+
+日付表示
+<?php echo get_the_date('Y.n.d'); ?>
