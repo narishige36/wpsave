@@ -11,6 +11,7 @@ Template Name: no-sidebar（カスタムテンプレートの名前）
 
 ワードプレスループ関数
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+/* ここに関数等を記載 */
 <?php endwhile; endif; ?>
 
 投稿者名表示
