@@ -22,3 +22,6 @@ Template Name: no-sidebar（カスタムテンプレートの名前）
 
 日付表示
 <?php echo get_the_date('Y.n.d'); ?>
+
+トップページのURL表示
+<?php echo home_url() ?>
