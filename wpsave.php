@@ -25,3 +25,6 @@ Template Name: no-sidebar（カスタムテンプレートの名前）
 
 トップページのURL表示
 <?php echo home_url() ?>
+
+記事URL取得
+<?php the_permalink(); ?>
