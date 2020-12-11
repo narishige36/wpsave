@@ -1,0 +1,29 @@
+自動整形
+Beautify
+
+コードごとに色付け
+Bracket Pair Colorizer 2
+
+スペルミスを検索
+EvilInspector
+
+Git 管理
+Git History
+
+HTMLの自動入力
+HTMLHint
+
+改行に色付け
+indent-rainbow
+
+VScode色付け
+Japanese Language Pack for Visual Studio Code
+
+プレビュー表示
+open in browser
+
+PHPの自動整形
+PHP Intelephense
+
+FTP接続
+SFTP
