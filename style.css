@@ -5,3 +5,13 @@ a:hover {
     /* マウスを重ねたとき0.5秒かけてopacity0.8になる */
     transition: 0.5s;
 }
+@media screen and (min-width:480px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+}
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+
+}
