@@ -54,3 +54,54 @@ if (preg_match($imgtag, $author_img, $imgurl)) {
 ?>
 画像表示
 <img src="<?php echo $authorimg ?>" alt="">
+
+別のphpファイルから読み込み
+<?php include("aaaaa.php"); ?>
+
+ナビゲーションメニューをループで表示
+<?php
+$menu_items = wp_get_nav_menu_items('メニュー名を入力');
+if ($menu_items) :
+	foreach ($menu_items as $menu) : setup_postdata($menu);
+?>
+		<option value="<?php echo esc_attr($menu->url); ?>"><?php echo esc_html($menu->title); ?>
+		</option>
+<?php
+	endforeach;
+endif;
+wp_reset_postdata();
+?>
+
+アドバンスカスタムフィールド
+テキスト
+<?php the_field(); ?>
+
+画像
+<?php
+get_field($contentsimg);
+if ($images) {
+	echo '<img src="' . $images[url] . '" >';
+}
+?>
+
+例
+					<?php for ($i = 1; $i <= 4; $i++) :
+						$contentsimg = "contents0" . $i . "_img";
+						$contentstext = "contents0" . $i . "_title";
+						$contentslink = "contents0" . $i . "_link";
+					?>
+						<li>
+							<a href="<?php the_field($contentslink); ?>">
+								<?php if (get_field($contentsimg)) : ?>
+									<?php
+									$images = get_field($contentsimg);
+									if ($images) {
+										echo '<img src="' . $images[url] . '" >';
+									}
+									?>
+								<?php else : ?>
+									<img src="<?php echo home_url() ?>/cms/cmnfix/noimage.jpg" alt="noimage">
+								<?php endif; ?>
+								<h2><?php the_field($contentstext); ?></h2>
+							</a>
+						</li>
